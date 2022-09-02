@@ -1,0 +1,6 @@
+module Pods_Moneylia {
+  umbrella header "Pods-Moneylia-umbrella.h"
+
+  export *
+  module * { export * }
+}
