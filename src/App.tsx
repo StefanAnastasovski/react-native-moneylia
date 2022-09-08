@@ -9,18 +9,23 @@
  */
 
 // imports: libraries + components
-import React from 'react';
-import {StyleSheet} from 'react-native';
-import {NativeBaseProvider, Center, Image} from 'native-base';
+import React, { useEffect, useState } from "react";
+import { NativeBaseProvider, Center } from "native-base";
 
+import SplashScreen from "react-native-splash-screen";
 // imports
-import MoneyliaLogo from './assets/allImages';
+import LoginScreen from "./screens/LoginScreen";
+import { moneyliaTheme } from "./styles/moneyliaTheme";
 
 const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
-    <NativeBaseProvider>
-      <Center flex={1} px="3">
-        <Image source={MoneyliaLogo as any} alt="MoneyliaLogo" />
+    <NativeBaseProvider theme={moneyliaTheme}>
+      <Center flex={1}>
+        <LoginScreen />
       </Center>
     </NativeBaseProvider>
   );
