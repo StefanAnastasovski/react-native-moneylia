@@ -33,14 +33,12 @@ export const WelcomeCard = () => {
     },
   };
 
+  const { textColor, title, subtitle } = textStyle;
+
   return (
     <View {...styles}>
-      <Text
-        style={[textStyle.textColor, textStyle.title]}
-      >{`${welcome}${welcomeName}`}</Text>
-      <Text style={[textStyle.textColor, textStyle.subtitle]}>
-        {welcomeMessage}
-      </Text>
+      <Text style={[textColor, title]}>{`${welcome}${welcomeName}`}</Text>
+      <Text style={[textColor, subtitle]}>{welcomeMessage}</Text>
     </View>
   );
 };
