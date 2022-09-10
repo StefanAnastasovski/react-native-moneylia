@@ -1,28 +1,23 @@
 import React from "react";
-import { View, useTheme, Text } from "native-base";
+import { View, Text } from "native-base";
 import { welcome, welcomeMessage, welcomeName } from "../../../../data/en";
 
 const width = "100%";
 const height = 193;
 
-export const WelcomeCard = () => {
-  const {
-    colors: { purpleBlue, white },
-  } = useTheme();
-
-  const styles = {
+const styles = {
+  welcomeContainer: {
     borderBottomRightRadius: 16,
     borderBottomLeftRadius: 16,
-    backgroundColor: purpleBlue[1],
+    backgroundColor: "purpleBlue.1", //theme
     width: width,
     height: height,
     px: 4,
     pt: 4,
-  };
-
-  const textStyle = {
+  },
+  textStyle: {
     textColor: {
-      color: white,
+      color: "white", //theme
     },
     title: {
       fontSize: 32,
@@ -31,12 +26,17 @@ export const WelcomeCard = () => {
     subtitle: {
       fontSize: 14,
     },
-  };
+  },
+};
 
-  const { textColor, title, subtitle } = textStyle;
+export const WelcomeCard = () => {
+  const {
+    welcomeContainer,
+    textStyle: { textColor, title, subtitle },
+  } = styles;
 
   return (
-    <View {...styles}>
+    <View {...welcomeContainer}>
       <Text style={[textColor, title]}>{`${welcome}${welcomeName}`}</Text>
       <Text style={[textColor, subtitle]}>{welcomeMessage}</Text>
     </View>
