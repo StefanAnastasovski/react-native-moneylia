@@ -1,6 +1,6 @@
 export type CardProps = {
   children: any;
-  backgroundColor?: string;
+  backgroundColor?: string | number;
   height?: number | string;
   width?: number | string;
 };
