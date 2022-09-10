@@ -3,18 +3,17 @@ import React from "react";
 import { View } from "native-base";
 import { AppBar } from "../../components/AppBar/AppBar";
 import { WelcomeCard } from "./components/WelcomeCard/WelcomeCard";
+import { SummaryCardWrapper } from "./components/SummaryCardWrapper";
+import { UserSummary } from "./components/UserSummary/UserSummary";
 
-const styles = {
-  joinContainer: {
-    // px: 6,
-  },
-};
 export const Dashboard = () => {
-  const { joinContainer } = styles;
   return (
-    <View {...joinContainer}>
+    <View>
       <AppBar />
       <WelcomeCard />
+      <SummaryCardWrapper>
+        <UserSummary />
+      </SummaryCardWrapper>
     </View>
   );
 };
