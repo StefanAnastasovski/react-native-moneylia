@@ -2,6 +2,7 @@ import React from "react";
 
 import { View } from "native-base";
 import { AppBar } from "../../components/AppBar/AppBar";
+import { WelcomeCard } from "./components/WelcomeCard/WelcomeCard";
 
 const styles = {
   joinContainer: {
@@ -13,6 +14,7 @@ export const Dashboard = () => {
   return (
     <View {...joinContainer}>
       <AppBar />
+      <WelcomeCard />
     </View>
   );
 };
