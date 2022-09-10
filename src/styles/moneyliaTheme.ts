@@ -1,5 +1,48 @@
 import { extendTheme } from "native-base";
 
+const fonts = {
+  Roboto: {
+    100: {
+      normal: "Roboto-Thin",
+    },
+    200: {
+      normal: "Roboto-Thin",
+    },
+    300: {
+      normal: "Roboto-Light",
+    },
+    400: {
+      normal: "Roboto-Regular",
+    },
+    500: {
+      normal: "Roboto-Medium",
+    },
+    600: {
+      normal: "Roboto-Bold",
+    },
+    700: {
+      normal: "Roboto-Bold",
+    },
+    800: {
+      normal: "Roboto-Bold",
+    },
+    900: {
+      normal: "Roboto-Bold",
+    },
+  },
+  WorkSans: {
+    100: { normal: "WorkSans-Thin", italic: "WorkSans-ThinItalic" },
+    200: { normal: "WorkSans-ExtraLight", italic: "WorkSans-ExtraLightItalic" },
+    300: { normal: "WorkSans-Light", italic: "WorkSans-LightItalic" },
+    400: { normal: "WorkSans-Regular", italic: "WorkSans-RegularItalic" },
+    500: { normal: "WorkSans-Medium", italic: "WorkSans-MediumItalic" },
+    600: { normal: "WorkSans-SemiBold", italic: "WorkSans-SemiBoldItalic" },
+    700: { normal: "WorkSans-Bold", italic: "WorkSans-BoldItalic" },
+    800: { normal: "WorkSans-ExtraBold", italic: "WorkSans-ExtraBoldItalic" },
+    900: { normal: "WorkSans-Black", italic: "WorkSans-BlackItalic" },
+  },
+};
+
 export const moneyliaTheme = extendTheme({
   colors: {
     // Add new color
@@ -21,5 +64,11 @@ export const moneyliaTheme = extendTheme({
       1: "#E5E5E5", // white
       2: "#F8F4FF", //violet
     },
+  },
+  fontConfig: fonts,
+  fonts: {
+    body: "WorkSans",
+    heading: "WorkSans",
+    mono: "WorkSans",
   },
 });
