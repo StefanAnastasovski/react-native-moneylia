@@ -1,11 +1,12 @@
 import React from "react";
 import { Card } from "../../../../components/Card/Card";
+import { UserSummaryBodyContainer } from "./UserSummaryBodyContainer";
 import { UserSummaryHeader } from "./UserSummaryHeader";
 
 const styles = {
   cardContainer: {
-    padding: 26,
-    height: 178,
+    padding: "24px",
+    height: "auto",
     marginTop: -100,
   },
 };
@@ -15,6 +16,7 @@ export const UserSummary = () => {
   return (
     <Card {...cardContainer}>
       <UserSummaryHeader />
+      <UserSummaryBodyContainer />
     </Card>
   );
 };

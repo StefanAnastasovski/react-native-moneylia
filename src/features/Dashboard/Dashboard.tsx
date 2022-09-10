@@ -8,7 +8,7 @@ import { UserSummary } from "./components/UserSummary/UserSummary";
 
 export const Dashboard = () => {
   return (
-    <View>
+    <View flex={1} bg="background.2">
       <AppBar />
       <WelcomeCard />
       <SummaryCardWrapper>
