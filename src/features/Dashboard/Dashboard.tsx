@@ -5,6 +5,7 @@ import { AppBar } from "../../components/AppBar/AppBar";
 import { WelcomeCard } from "./components/WelcomeCard/WelcomeCard";
 import { SummaryCardWrapper } from "./components/SummaryCardWrapper";
 import { UserSummary } from "./components/UserSummary/UserSummary";
+import { ContributionsHeader } from "./components/Contributions/ContributionsHeader";
 
 export const Dashboard = () => {
   return (
@@ -13,6 +14,7 @@ export const Dashboard = () => {
       <WelcomeCard />
       <SummaryCardWrapper>
         <UserSummary />
+        <ContributionsHeader />
       </SummaryCardWrapper>
     </View>
   );
