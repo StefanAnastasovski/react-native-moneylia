@@ -61,8 +61,9 @@ export const moneyliaTheme = extendTheme({
     errors: {
       1: "#F83E5A", // red
     },
-    rose: {
-      1: "#BF7EE6",
+    lavender: {
+      1: "#BF7EE6", //rose
+      2: "#9529d5", //rose
     },
     background: {
       1: "#E5E5E5", // white
