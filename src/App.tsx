@@ -24,13 +24,7 @@ const App = () => {
       <NativeBaseProvider theme={moneyliaTheme}>
         {dashboardFlag && (
           <>
-            <View flex={1}>
-              <CustomStatusBar
-                backgroundColor={moneyliaTheme.colors.purpleBlue[1]}
-                barStyle="light-content"
-              />
-              <Dashboard />
-            </View>
+            <Dashboard />
           </>
         )}
 
