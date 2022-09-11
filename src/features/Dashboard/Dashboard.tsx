@@ -1,13 +1,12 @@
 import React from "react";
-import { SafeAreaView, StatusBarStyle } from "react-native";
-import { View, useTheme, StatusBar, Text } from "native-base";
+import { SafeAreaView } from "react-native";
+import { View, useTheme, StatusBar } from "native-base";
 import { AppBar } from "../../components/AppBar/AppBar";
 import { WelcomeCard } from "./components/WelcomeCard/WelcomeCard";
 import { SummaryCardWrapper } from "./components/SummaryCardWrapper";
 import { UserSummary } from "./components/UserSummary/UserSummary";
 import { ContributionsHeader } from "./components/Contributions/ContributionsHeader";
 import { ContributionsBody } from "./components/Contributions/ContributionsBody";
-import CustomStatusBar from "../../components/CustomStatusBar";
 
 const styles = {
   container: {
