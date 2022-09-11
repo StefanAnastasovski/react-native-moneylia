@@ -1,3 +1,9 @@
+import React from "react";
+import { PaidIcon } from "../assets/icons/PaidIcon";
+import { DueIcon } from "../assets/icons/DueIcon";
+import { AdvancePaymentIcon } from "../assets/icons/AdvancePaymentIcon";
+import { ModularityIcon } from "../assets/icons/ModularityIcon";
+
 // app data
 export const welcome = "Hello, ";
 export const welcomeMessage = "Welcome in Moneylia";
@@ -10,28 +16,37 @@ export const userSummaryTitles = {
   number: "Number",
 };
 export const contributionsHeader = "Contributions of ";
-export const dashboardContributionsCard = {
-  card1: {
-    id: 1,
+export const dashboardContributionsCards = [
+  {
+    id: "card1",
     title: "Paid",
-    icon: "Paid",
+    icon: <PaidIcon />,
   },
-  card2: {
-    id: 2,
+  {
+    id: "card2",
     title: "Due",
-    icon: "Due",
+    icon: <DueIcon />,
   },
-  card3: {
-    id: 3,
+  {
+    id: "card3",
     title: "Advance payment",
-    icon: "Advance payment",
+    icon: <AdvancePaymentIcon />,
   },
-  card4: {
-    id: 4,
+  {
+    id: "card4",
     title: "Modularity",
-    icon: "Modularity",
+    icon: <ModularityIcon />,
+  },
+];
+export const currencySign = {
+  euro: {
+    value: "€",
+  },
+  dollar: {
+    value: "$",
   },
 };
+export const valueUnavailable = "Unavailable";
 
 // dynamic data
 export const welcomeName = "John S.";
