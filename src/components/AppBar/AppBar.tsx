@@ -14,7 +14,6 @@ const styles = {
 
 export const AppBar = ({
   backgroundColor,
-  children,
   onPressMoneylia,
   onPressChat,
 }: AppBarProps) => {
@@ -31,7 +30,6 @@ export const AppBar = ({
 
   return (
     <HStack {...extandedStyles}>
-      {children}
       <IconButton
         icon={<MoneyliaIcon />}
         _pressed={pressedStyle}
