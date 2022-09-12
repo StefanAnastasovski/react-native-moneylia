@@ -5,6 +5,7 @@ import { AppBar } from "../../components/AppBar/AppBar";
 import { PagoPaServiceCard } from "./components/PagoPaServiceCard/PagoPaServiceCard";
 import { PagoPaTextSection } from "./components/PagoPaTextSection/PagoPaTextSection";
 import { PagoPaBodyWrapper } from "./components/PagoPaBodyWrapper";
+import { PagoPaTransactions } from "./components/PagoPaTransactions/PagoPaTransactions";
 
 const styles = {
   container: {
@@ -46,6 +47,7 @@ export const PagoPaService = () => {
           <PagoPaServiceCard />
           <PagoPaBodyWrapper>
             <PagoPaTextSection />
+            <PagoPaTransactions />
           </PagoPaBodyWrapper>
         </View>
       </SafeAreaView>
