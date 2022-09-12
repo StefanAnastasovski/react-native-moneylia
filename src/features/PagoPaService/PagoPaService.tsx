@@ -33,7 +33,6 @@ export const PagoPaService = () => {
       backgroundColor: background[2],
     },
   };
-  console.log(colors);
   const { rootContainer, container, statusBar, safeAreaViewBg, barStyle } =
     extendedStyles;
 
