@@ -55,7 +55,7 @@ export const pagoPaTransactionList = [
   {
     id: "pagopa1",
     description:
-      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2021 EXPIRES ...",
+      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2021 EXPIRES SOON.",
     expiryDate: "02/28/2022",
     amount: "1,234.99",
   },
