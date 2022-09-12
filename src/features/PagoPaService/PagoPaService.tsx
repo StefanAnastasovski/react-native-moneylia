@@ -3,6 +3,8 @@ import { SafeAreaView } from "react-native";
 import { View, useTheme, StatusBar } from "native-base";
 import { AppBar } from "../../components/AppBar/AppBar";
 import { PagoPaServiceCard } from "./components/PagoPaServiceCard/PagoPaServiceCard";
+import { PagoPaTextSection } from "./components/PagoPaTextSection/PagoPaTextSection";
+import { PagoPaBodyWrapper } from "./components/PagoPaBodyWrapper";
 
 const styles = {
   container: {
@@ -31,7 +33,6 @@ export const PagoPaService = () => {
       backgroundColor: background[2],
     },
   };
-  console.log(colors);
   const { rootContainer, container, statusBar, safeAreaViewBg, barStyle } =
     extendedStyles;
 
@@ -43,6 +44,9 @@ export const PagoPaService = () => {
         <View {...container}>
           <AppBar backgroundColor="lavender.1" />
           <PagoPaServiceCard />
+          <PagoPaBodyWrapper>
+            <PagoPaTextSection />
+          </PagoPaBodyWrapper>
         </View>
       </SafeAreaView>
     </>
