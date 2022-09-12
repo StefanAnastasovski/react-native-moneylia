@@ -8,7 +8,7 @@ import LoginScreen from "./screens/LoginScreen";
 import { moneyliaTheme } from "./styles/moneyliaTheme";
 import { featureFlags } from "./data/featureFlags";
 import { Dashboard } from "./features/Dashboard/Dashboard";
-import { PagoPaService } from "./features/PagoPaService/PagoPaService";
+import PagoPaServiceScreen from "./screens/PagoPaServiceScreen";
 
 const App = () => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <>
       <NativeBaseProvider theme={moneyliaTheme}>
-        {pagoPaServiceFlag && <PagoPaService />}
+        {pagoPaServiceFlag && <PagoPaServiceScreen />}
 
         {dashboardFlag && <Dashboard />}
 
