@@ -51,7 +51,7 @@ export const pagoPaServiceTaxPayment = "Tax Payments";
 export const pagoPaServiceTitle = "Movements to pay";
 export const pagoPaServiceSubtitle =
   "View pending transactions for the past two years and proceed to payment.";
-export const pagoPaServiceList = [
+export const pagoPaTransactionList = [
   {
     id: "pagopa1",
     description:
