@@ -47,7 +47,44 @@ export const currencySign = {
   },
 };
 export const valueUnavailable = "Unavailable";
-
+export const pagoPaServiceTaxPayment = "Tax Payments";
+export const pagoPaServiceTitle = "Movements to pay";
+export const pagoPaServiceSubtitle =
+  "View pending transactions for the past two years and proceed to payment.";
+export const pagoPaTransactionList = [
+  {
+    id: "pagopa1",
+    description:
+      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2021 EXPIRES SOON.",
+    expiryDate: "02/28/2022",
+    amount: "1,234.99",
+  },
+  {
+    id: "pagopa2",
+    description: "PAYMENT ON DEPOSIT",
+    expiryDate: "31/01/2022",
+    amount: "234.99",
+  },
+  {
+    id: "pagopa3",
+    description: "PAYMENT ON DEPOSIT",
+    expiryDate: "31/05/2021",
+    amount: "634.99",
+  },
+  {
+    id: "pagopa4",
+    description:
+      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2020 EXPIRES ...",
+    expiryDate: "02/28/2021",
+    amount: "1,434.94",
+  },
+  {
+    id: "pagopa5",
+    description: "PAYMENT ON DEPOSIT",
+    expiryDate: "31/01/2021",
+    amount: "1,104.39",
+  },
+];
 // dynamic data
 export const welcomeName = "John S.";
 export const userInfo = {
