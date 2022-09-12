@@ -51,11 +51,11 @@ export const pagoPaServiceTaxPayment = "Tax Payments";
 export const pagoPaServiceTitle = "Movements to pay";
 export const pagoPaServiceSubtitle =
   "View pending transactions for the past two years and proceed to payment.";
-export const pagoPaServiceList = [
+export const pagoPaTransactionList = [
   {
     id: "pagopa1",
     description:
-      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2021 EXPIRES ...",
+      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2021 EXPIRES SOON.",
     expiryDate: "02/28/2022",
     amount: "1,234.99",
   },
