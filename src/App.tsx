@@ -7,7 +7,7 @@ import SplashScreen from "react-native-splash-screen";
 import LoginScreen from "./screens/LoginScreen";
 import { moneyliaTheme } from "./styles/moneyliaTheme";
 import { featureFlags } from "./data/featureFlags";
-import { Dashboard } from "./features/Dashboard/Dashboard";
+import DashboardScreen from "./screens/DashboardScreen";
 import PagoPaServiceScreen from "./screens/PagoPaServiceScreen";
 
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
       <NativeBaseProvider theme={moneyliaTheme}>
         {pagoPaServiceFlag && <PagoPaServiceScreen />}
 
-        {dashboardFlag && <Dashboard />}
+        {dashboardFlag && <DashboardScreen />}
 
         {joinFreeFlag && (
           <Center>
