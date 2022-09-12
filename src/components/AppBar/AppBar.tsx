@@ -18,10 +18,10 @@ export const AppBar = ({
   onPressChat,
 }: AppBarProps) => {
   const {
-    colors: { purpleBlue },
+    colors: { purpleBlue, lavender },
   } = useTheme();
   const pressedStyle = {
-    bg: purpleBlue[2],
+    bg: !backgroundColor ? purpleBlue[2] : lavender[2],
   };
   const extandedStyles = {
     ...styles,

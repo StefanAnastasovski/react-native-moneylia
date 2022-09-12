@@ -1,4 +1,5 @@
 export const featureFlags = {
   isJoinFreeEnabled: false,
-  isDashboardEnabled: true,
+  isDashboardEnabled: false,
+  isPagoPaServiceEnabled: true,
 };

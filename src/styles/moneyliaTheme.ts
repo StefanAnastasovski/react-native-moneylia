@@ -56,9 +56,14 @@ export const moneyliaTheme = extendTheme({
       1: "#6F6D7B",
       2: "#83828E",
       3: "#A5A5AA",
+      4: "#9897A1",
     },
     errors: {
       1: "#F83E5A", // red
+    },
+    lavender: {
+      1: "#BF7EE6", //rose
+      2: "#9529d5", //rose
     },
     background: {
       1: "#E5E5E5", // white
