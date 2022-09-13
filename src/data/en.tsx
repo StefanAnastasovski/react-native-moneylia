@@ -88,10 +88,11 @@ export const pagoPaTransactionList = [
 export const paymentDetailsTitle = "Payment details";
 export const paymentNotice = "Payment notice";
 export const paymentDetails = {
-  creditorTitle: "creditor",
+  creditorTitle: "Creditor",
   creditor: "ENPACL\nVia del Caravaggio n. 78\n00147 (RM)",
+  casual: "Casual",
   expiryDateTitle: "Expiry date",
-  creditorTaxCodeTitle: "creditorTaxCode",
+  creditorTaxCodeTitle: "Creditor tax code",
   creditorTaxCode: "8011911704444",
   noticeCodeTitle: "Notice code",
   noticeCode: "301000000014982222",
