@@ -1,12 +1,17 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
-import { View, useTheme, StatusBar } from "native-base";
+import { View, useTheme, StatusBar, ScrollView } from "native-base";
 import { NavigatorBackBar } from "../../components/NavigatorBackBar/NavigatorBackBar";
+import { PaymentDetailsHeader } from "./components/PaymentDetailsHeader";
+import { PaymentDetailsRow } from "./components/PaymentDetailsRow";
+import { paymentDetails } from "../../data/en";
+import { PaymentDetailsPayNowCard } from "./components/PaymentDetailsPayNowCard";
 
 const styles = {
   container: {
     flex: 1,
-    bg: "background.2",
+    bg: "white",
+    px: 4,
   },
   rootContainer: {
     flex: 1,
@@ -16,7 +21,6 @@ const styles = {
 
 export const PaymentDetails = () => {
   const {
-    colors,
     colors: { lavender, background },
   } = useTheme();
 
@@ -27,20 +31,47 @@ export const PaymentDetails = () => {
       backgroundColor: lavender[1],
     },
     safeAreaViewBg: {
-      backgroundColor: background[2],
+      backgroundColor: "white",
     },
   };
   const { rootContainer, container, statusBar, safeAreaViewBg, barStyle } =
     extendedStyles;
+
+  const {
+    creditorTitle,
+    creditor,
+    casual,
+    expiryDateTitle,
+    creditorTaxCodeTitle,
+    creditorTaxCode,
+    noticeCodeTitle,
+    noticeCode,
+  } = paymentDetails;
 
   return (
     <>
       <StatusBar barStyle={barStyle} />
       <SafeAreaView style={statusBar} />
       <SafeAreaView style={[rootContainer, safeAreaViewBg]}>
-        <View {...container}>
-          <NavigatorBackBar backgroundColor="lavender.1" />
-        </View>
+        <NavigatorBackBar backgroundColor="lavender.1" />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View {...container}>
+            <PaymentDetailsHeader />
+            <PaymentDetailsRow title={creditorTitle} text={creditor} />
+            <PaymentDetailsRow title={casual} text={creditor} />
+            <PaymentDetailsRow title={expiryDateTitle} text={creditor} />
+            <PaymentDetailsRow
+              title={creditorTaxCodeTitle}
+              text={creditorTaxCode}
+            />
+            <PaymentDetailsRow
+              title={noticeCodeTitle}
+              text={noticeCode}
+              useDevider={false}
+            />
+          </View>
+          <PaymentDetailsPayNowCard />
+        </ScrollView>
       </SafeAreaView>
     </>
   );
