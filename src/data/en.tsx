@@ -55,7 +55,7 @@ export const pagoPaTransactionList = [
   {
     id: "pagopa1",
     description:
-      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2021 EXPIRES SOON.",
+      "SUBJECTIVE AND SUPPLEMENTARY CONTRIBUTION YEAR 2021 EXPIRY 28-02-2022.",
     expiryDate: "02/28/2022",
     amount: "1,234.99",
   },
@@ -85,6 +85,21 @@ export const pagoPaTransactionList = [
     amount: "1,104.39",
   },
 ];
+export const paymentDetailsTitle = "Payment details";
+export const paymentNotice = "Payment notice";
+export const paymentDetails = {
+  creditorTitle: "Creditor",
+  creditor: "ENPACL\nVia del Caravaggio n. 78\n00147 (RM)",
+  casual: "Casual",
+  expiryDateTitle: "Expiry date",
+  creditorTaxCodeTitle: "Creditor tax code",
+  creditorTaxCode: "8011911704444",
+  noticeCodeTitle: "Notice code",
+  noticeCode: "301000000014982222",
+  totalDue: "Total due",
+  ctaPayNow: "Pay now",
+};
+
 // dynamic data
 export const welcomeName = "John S.";
 export const userInfo = {
