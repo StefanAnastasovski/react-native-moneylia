@@ -9,6 +9,7 @@ import { moneyliaTheme } from "./styles/moneyliaTheme";
 import { featureFlags } from "./data/featureFlags";
 import DashboardScreen from "./screens/DashboardScreen";
 import PagoPaServiceScreen from "./screens/PagoPaServiceScreen";
+import PaymentDetailsScreen from "./screens/PaymentDetailsScreen";
 
 const App = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const App = () => {
     isJoinFreeEnabled: joinFreeFlag,
     isDashboardEnabled: dashboardFlag,
     isPagoPaServiceEnabled: pagoPaServiceFlag,
+    isPaymentDetailsEnabled: paymentDetailsFlag,
   } = featureFlags;
 
   return (
@@ -28,6 +30,8 @@ const App = () => {
         {pagoPaServiceFlag && <PagoPaServiceScreen />}
 
         {dashboardFlag && <DashboardScreen />}
+
+        {paymentDetailsFlag && <PaymentDetailsScreen />}
 
         {joinFreeFlag && (
           <Center>
