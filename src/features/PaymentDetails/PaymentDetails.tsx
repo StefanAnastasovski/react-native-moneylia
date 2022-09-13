@@ -2,11 +2,13 @@ import React from "react";
 import { SafeAreaView } from "react-native";
 import { View, useTheme, StatusBar } from "native-base";
 import { NavigatorBackBar } from "../../components/NavigatorBackBar/NavigatorBackBar";
+import { PaymentDetailsHeader } from "./components/PaymentDetailsHeader";
 
 const styles = {
   container: {
     flex: 1,
     bg: "background.2",
+    px: 4,
   },
   rootContainer: {
     flex: 1,
@@ -16,7 +18,6 @@ const styles = {
 
 export const PaymentDetails = () => {
   const {
-    colors,
     colors: { lavender, background },
   } = useTheme();
 
@@ -38,8 +39,9 @@ export const PaymentDetails = () => {
       <StatusBar barStyle={barStyle} />
       <SafeAreaView style={statusBar} />
       <SafeAreaView style={[rootContainer, safeAreaViewBg]}>
+        <NavigatorBackBar backgroundColor="lavender.1" />
         <View {...container}>
-          <NavigatorBackBar backgroundColor="lavender.1" />
+          <PaymentDetailsHeader />
         </View>
       </SafeAreaView>
     </>

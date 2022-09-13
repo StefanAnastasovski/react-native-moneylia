@@ -57,6 +57,7 @@ export const moneyliaTheme = extendTheme({
       2: "#83828E",
       3: "#A5A5AA",
       4: "#9897A1",
+      5: "#EAEAEC",
     },
     errors: {
       1: "#F83E5A", // red
