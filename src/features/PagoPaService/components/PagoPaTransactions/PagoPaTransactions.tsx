@@ -10,7 +10,7 @@ const styles = {
 };
 
 export const PagoPaTransactions = () => {
-  const renderItem = ({ item, index }: { item: any; index: any }) => {
+  const renderItem = ({ item }: { item: any }) => {
     return (
       <PagoPaTransactionCard
         description={item.description}
@@ -20,15 +20,29 @@ export const PagoPaTransactions = () => {
     );
   };
   return (
-    <FlatList
-      data={pagoPaTransactionList}
-      renderItem={renderItem}
-      keyExtractor={(item) => item.id}
-      bounces={false}
-      scrollEnabled={true}
-      showsVerticalScrollIndicator={false}
-      showsHorizontalScrollIndicator={false}
-      {...styles}
-    />
+    <>
+      {/* {pagoPaTransactionList.map((item) => {
+        console.log(item);
+        return (
+          <PagoPaTransactionCard
+            key={item.id}
+            description={item.description}
+            expiryDate={item.expiryDate}
+            amount={item.amount}
+          />
+        );
+      })} */}
+      <FlatList
+        data={pagoPaTransactionList}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        bounces={false}
+        scrollEnabled={true}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
+        {...styles}
+        maxH="425"
+      />
+    </>
   );
 };
