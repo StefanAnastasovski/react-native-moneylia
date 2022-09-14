@@ -2,6 +2,8 @@ import React from "react";
 import { FlatList } from "native-base";
 import { PagoPaTransactionCard } from "./PagoPaTransactionCard";
 import { pagoPaTransactionList } from "../../../../data/en";
+import { Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const styles = {
   fontSize: 22,
@@ -10,39 +12,35 @@ const styles = {
 };
 
 export const PagoPaTransactions = () => {
+  const navigation = useNavigation();
   const renderItem = ({ item }: { item: any }) => {
     return (
-      <PagoPaTransactionCard
-        description={item.description}
-        expiryDate={item.expiryDate}
-        amount={item.amount}
-      />
+      <Pressable
+        onPress={() => {
+          navigation.navigate("PaymentDetails", {
+            id: item.id,
+          });
+        }}
+      >
+        <PagoPaTransactionCard
+          description={item.description}
+          expiryDate={item.expiryDate}
+          amount={item.amount}
+        />
+      </Pressable>
     );
   };
   return (
-    <>
-      {/* {pagoPaTransactionList.map((item) => {
-        console.log(item);
-        return (
-          <PagoPaTransactionCard
-            key={item.id}
-            description={item.description}
-            expiryDate={item.expiryDate}
-            amount={item.amount}
-          />
-        );
-      })} */}
-      <FlatList
-        data={pagoPaTransactionList}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        bounces={false}
-        scrollEnabled={true}
-        showsVerticalScrollIndicator={false}
-        showsHorizontalScrollIndicator={false}
-        {...styles}
-        maxH="425"
-      />
-    </>
+    <FlatList
+      data={pagoPaTransactionList}
+      renderItem={renderItem}
+      keyExtractor={(item) => item.id}
+      bounces={false}
+      scrollEnabled={true}
+      showsVerticalScrollIndicator={false}
+      showsHorizontalScrollIndicator={false}
+      {...styles}
+      maxH="425"
+    />
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Button } from "native-base";
 import { currencySign, paymentDetails } from "../../../data/en";
+import { useNavigation } from "@react-navigation/native";
 
 const styles = {
   shadowStyle: {
@@ -46,6 +47,7 @@ const styles = {
 };
 
 export const PaymentDetailsPayNowCard = ({ amount }: { amount?: string }) => {
+  const navigation = useNavigation();
   const {
     container,
     textContainer,
@@ -63,7 +65,8 @@ export const PaymentDetailsPayNowCard = ({ amount }: { amount?: string }) => {
           <Text {...titleStyle}>{totalDue}</Text>
           <Text {...amountStyle}>{`${currency} ${amount || "0.00"}`}</Text>
         </View>
-        <Button {...btnStyle} onPress={() => console.log("Pay Now!")}>
+
+        <Button {...btnStyle} onPress={() => navigation.navigate("Dashboard")}>
           {ctaPayNow}
         </Button>
       </View>

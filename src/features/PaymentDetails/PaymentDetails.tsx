@@ -4,8 +4,10 @@ import { View, useTheme, StatusBar, ScrollView } from "native-base";
 import { NavigatorBackBar } from "../../components/NavigatorBackBar/NavigatorBackBar";
 import { PaymentDetailsHeader } from "./components/PaymentDetailsHeader";
 import { PaymentDetailsRow } from "./components/PaymentDetailsRow";
-import { paymentDetails } from "../../data/en";
+import { pagoPaTransactionList, paymentDetails } from "../../data/en";
 import { PaymentDetailsPayNowCard } from "./components/PaymentDetailsPayNowCard";
+import { useRoute } from "@react-navigation/native";
+import { getPaymentDetails } from "./utils/getPaymentDetails";
 
 const styles = {
   container: {
@@ -20,6 +22,8 @@ const styles = {
 };
 
 export const PaymentDetails = () => {
+  const route = useRoute();
+  const { id } = route.params;
   const {
     colors: { lavender, background },
   } = useTheme();
@@ -48,6 +52,8 @@ export const PaymentDetails = () => {
     noticeCode,
   } = paymentDetails;
 
+  const paymentData = getPaymentDetails(id);
+  const { description, expiryDate, amount } = paymentData[0] || {};
   return (
     <>
       <StatusBar barStyle={barStyle} />
@@ -58,8 +64,8 @@ export const PaymentDetails = () => {
           <View {...container}>
             <PaymentDetailsHeader />
             <PaymentDetailsRow title={creditorTitle} text={creditor} />
-            <PaymentDetailsRow title={casual} text={creditor} />
-            <PaymentDetailsRow title={expiryDateTitle} text={creditor} />
+            <PaymentDetailsRow title={casual} text={description} />
+            <PaymentDetailsRow title={expiryDateTitle} text={expiryDate} />
             <PaymentDetailsRow
               title={creditorTaxCodeTitle}
               text={creditorTaxCode}
@@ -70,7 +76,7 @@ export const PaymentDetails = () => {
               useDevider={false}
             />
           </View>
-          <PaymentDetailsPayNowCard />
+          <PaymentDetailsPayNowCard amount={amount} />
         </ScrollView>
       </SafeAreaView>
     </>
