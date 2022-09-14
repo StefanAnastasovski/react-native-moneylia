@@ -1,17 +1,16 @@
 import React from "react";
 
 import { Center, View, Text, Pressable } from "native-base";
+import { useNavigation } from "@react-navigation/native";
 
 const findOutMore = "Don't have SPID or CIE? Find out more";
 
 const FindOutMore = () => {
-  const findOutMoreHandler = () => {
-    console.log("findOutMore Clicked - Redirect");
-  };
+  const navigation = useNavigation();
   return (
     <View>
       <Center>
-        <Pressable onPress={findOutMoreHandler}>
+        <Pressable onPress={() => navigation.navigate("Dashboard")}>
           <Text {...styles.findOutMoreText}>{findOutMore}</Text>
         </Pressable>
       </Center>
