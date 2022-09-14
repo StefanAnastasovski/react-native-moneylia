@@ -48,8 +48,7 @@ export const NavigatorBackBar = ({ backgroundColor, onPress }: AppBarProps) => {
           icon={<ArrowLeftIcon />}
           _pressed={pressedStyle}
           onPress={() => {
-            navigation.canGoBack() || navigation.navigate("Dashboard");
-            // todo: fix it
+            navigation.goBack("PagoPa");
           }}
         />
       </View>
