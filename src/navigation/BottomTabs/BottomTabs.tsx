@@ -6,15 +6,19 @@ import { ProfileScreen } from "../../screens/ProfileScreen";
 import PagoPaServiceScreen from "../../screens/PagoPaServiceScreen";
 
 const Tab = createBottomTabNavigator();
+const styles = {
+  tabStyle: {
+    paddingBottom: 20,
+    paddingTop: 8,
+  },
+};
 
 export const BottomTabs = () => {
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarStyle: { paddingBottom: 20, paddingTop: 8 },
-        headerStyle: { backgroundColor: "#7476ED" },
-        headerTintColor: "white",
+        tabBarStyle: styles.tabStyle,
       }}
     >
       <Tab.Screen name={"Dashboard"} component={DashboardScreen} />
