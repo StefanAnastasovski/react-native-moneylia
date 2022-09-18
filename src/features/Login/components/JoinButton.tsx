@@ -1,18 +1,17 @@
 import React from "react";
 
 import { View, Button } from "native-base";
+import { useNavigation } from "@react-navigation/native";
 
 const btnText = "Join for free";
 
 const JoinButton = () => {
+  const navigation = useNavigation();
   const { btnContainer, btn: btnStyle } = styles;
-  const btnHandler = () => {
-    console.log("Button Clicked");
-  };
 
   return (
     <View {...btnContainer}>
-      <Button {...btnStyle} onPress={btnHandler}>
+      <Button {...btnStyle} onPress={() => navigation.navigate("Dashboard")}>
         {btnText}
       </Button>
     </View>

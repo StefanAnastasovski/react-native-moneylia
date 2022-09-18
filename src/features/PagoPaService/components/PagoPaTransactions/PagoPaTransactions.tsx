@@ -2,6 +2,8 @@ import React from "react";
 import { FlatList } from "native-base";
 import { PagoPaTransactionCard } from "./PagoPaTransactionCard";
 import { pagoPaTransactionList } from "../../../../data/en";
+import { Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const styles = {
   fontSize: 22,
@@ -10,13 +12,22 @@ const styles = {
 };
 
 export const PagoPaTransactions = () => {
-  const renderItem = ({ item, index }: { item: any; index: any }) => {
+  const navigation = useNavigation();
+  const renderItem = ({ item }: { item: any }) => {
     return (
-      <PagoPaTransactionCard
-        description={item.description}
-        expiryDate={item.expiryDate}
-        amount={item.amount}
-      />
+      <Pressable
+        onPress={() => {
+          navigation.navigate("PaymentDetails", {
+            id: item.id,
+          });
+        }}
+      >
+        <PagoPaTransactionCard
+          description={item.description}
+          expiryDate={item.expiryDate}
+          amount={item.amount}
+        />
+      </Pressable>
     );
   };
   return (
@@ -29,6 +40,7 @@ export const PagoPaTransactions = () => {
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
       {...styles}
+      maxH="425"
     />
   );
 };

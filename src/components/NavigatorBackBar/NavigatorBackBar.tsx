@@ -3,6 +3,7 @@ import { HStack, IconButton, Text, useTheme, View } from "native-base";
 import { AppBarProps } from "../../@types/AppBarProps";
 import { ArrowLeftIcon } from "../../assets/icons/ArrowLeftIcon";
 import { paymentDetailsTitle } from "../../data/en";
+import { useNavigation } from "@react-navigation/native";
 
 const styles = {
   container: {
@@ -24,6 +25,7 @@ const styles = {
 };
 
 export const NavigatorBackBar = ({ backgroundColor, onPress }: AppBarProps) => {
+  const navigation = useNavigation();
   const {
     colors: { lavender },
   } = useTheme();
@@ -46,9 +48,8 @@ export const NavigatorBackBar = ({ backgroundColor, onPress }: AppBarProps) => {
           icon={<ArrowLeftIcon />}
           _pressed={pressedStyle}
           onPress={() => {
-            console.log("go back");
+            navigation.goBack("PagoPa");
           }}
-          // todo: implement onPress={onPress}
         />
       </View>
       <View {...innerTextContainer}>
