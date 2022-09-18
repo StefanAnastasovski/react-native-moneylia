@@ -89,7 +89,7 @@ export const BottomTabs = () => {
           tabBarLabel: ({ focused }) => {
             return (
               <Text color={focused ? focusColor : color} {...styles.labelStyle}>
-                Profile
+                PagoPa
               </Text>
             );
           },
@@ -110,7 +110,7 @@ export const BottomTabs = () => {
           tabBarLabel: ({ focused }) => {
             return (
               <Text color={focused ? focusColor : color} {...styles.labelStyle}>
-                Dashboard
+                Profile
               </Text>
             );
           },
