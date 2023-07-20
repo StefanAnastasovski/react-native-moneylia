@@ -49,3 +49,7 @@ Thumbs.db
 *.wmv
 
 *.txt
+
+
+# CocoaPods
+/ios/Pods/

@@ -1,31 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 // imports: libraries + components
-import React from 'react';
-import {StyleSheet} from 'react-native';
-import {NativeBaseProvider, Center, Image} from 'native-base';
+import React, { useEffect } from "react";
+import { NativeBaseProvider } from "native-base";
+import { NavigationContainer } from "@react-navigation/native";
 
+import SplashScreen from "react-native-splash-screen";
 // imports
-import MoneyliaLogo from './assets/allImages';
+import { moneyliaTheme } from "./styles/moneyliaTheme";
+import { MainNavigation } from "./navigation/MainNavigation";
 
-const App = () => {
+export const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
-    <NativeBaseProvider>
-      <Center flex={1} px="3">
-        <Image source={MoneyliaLogo as any} alt="MoneyliaLogo" />
-      </Center>
-    </NativeBaseProvider>
+    <>
+      <NativeBaseProvider theme={moneyliaTheme}>
+        <NavigationContainer onReady={() => SplashScreen.hide()}>
+          <MainNavigation />
+        </NavigationContainer>
+      </NativeBaseProvider>
+    </>
   );
 };
 
 // const styles = StyleSheet.create({});
-
-export default App;
